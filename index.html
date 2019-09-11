@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./css/style.css">
     <title>Diamond Huang's Portfolio|web developer</title>
   </head>
   <body>
+    <a href="" class="return-to-top hidden" id="backTopBtn">
+      <img src="./img/up-arrow-white.svg" alt="back to top"></a>
     <header>
       <div class="top-header">
       <div class="mylogo"><a href="/"><img src="./img/myLogo.png" alt="my logo"></a></div>
       <ul class="top-nav">
-        <li><a href="#skills">Skills</a> </li>
-        <li><a href="#portfolios">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="top-nav-item" href="#skills" >Skills</a> </li>
+        <li><a class="top-nav-item" href="#portfolios">Portfolio</a></li>
+        <li><a class="top-nav-item" href="#about">About</a></li>
+        <li><a class="top-nav-item" href="#contact" >Contact</a></li>
       </ul>
     </div>
         
@@ -28,7 +29,11 @@
           <span class="position">front-end web developer</span> in China<br> I creates things
           from high quality responsive websites to interactive web applications
         </h1>
+        <a href="#skills" class="nextArrow" onclick="smoothJump('#skills')">
+            <img src="./img/arrow_down_green.png" alt="next section button">
+          </a>
       </section>
+     
     </header>
     <main>
       <section class="skills" id="skills">
@@ -44,7 +49,9 @@
                 <img src="./img/webpack_logo.png" alt="webpack logo">
                 <img src="./img/PS_logo.png" alt="photoshop logo">
             </div>
-          
+            <a href="#portfolios" class="nextArrow skills-down" onclick="smoothJump('#portfolios')">
+                <img src="./img/arrow_down_green.png" alt="next section button">
+              </a>    
       </section>
       <section class="portfolios" id="portfolios">
         <h2>Some projects I've been working on lately</h2>
@@ -77,6 +84,9 @@
                   </a>
               </div>
         </div>
+        <a href="#about" class="nextArrow portfolios-down" onclick="smoothJump('#about')">
+            <img src="./img/arrow_down_white.png" alt="next section button">
+          </a>
       </section>
       <section class="about" id="about">
         <h2>About Me</h2>
@@ -87,12 +97,15 @@
           <p>I’m also enjoy navigating challenge and have the ability to figure out the direction the solution to a problems needs to take.</p> 
           <p>I also have skills in other fields like making video games, 3D modeling and animations.</p>   
         <p>if you have some cool projects to work on. Please do contact me. </p>
+        <a href="#contact" class="nextArrow about-down" onclick="smoothJump('#contact')">
+            <img src="./img/arrow_down_green.png" alt="next section button">
+          </a> 
       </section>
       <section class="contact" id="contact">
         <h2>i'm actively looking for a job, if you want me to send you my resume, 
           or you have any project want to work with me, please feel free to contact me.</h2>
           <a href="mailto:diamondcn923@gmail.com" class="getInTouchBtn">Get In Touch</a>
-          <div class="socialMedia">
+          <div class="contact-socialMedia">
             <a href="https://github.com/DiamondGotFenny"><img src="./img/github_logo.png" alt="my github link"></a>
             <a href="https://www.linkedin.com/in/diamond-huang-12761815/"><img src="./img/linkedin_logo.png" alt="my linkedin link"></a>
             <a href="https://www.facebook.com/diamondcn923"><img src="./img/facebook_logo.png" alt="my facebook link"></a>
@@ -100,5 +113,7 @@
         
       </section>
     </main>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

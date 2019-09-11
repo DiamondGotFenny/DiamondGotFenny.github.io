@@ -9,6 +9,7 @@ ul {
   padding: 0;
   color: #17252a;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -58,6 +59,123 @@ header .mylogo img {
   list-style: none;
 }
 
+/*************back to top start********/
+.return-to-top {
+  transition: all 0.25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  z-index: 99;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: 0.25em;
+  width: 5em;
+  height: 5em;
+  background-color: #feffff;
+}
+
+.return-to-top.show {
+  visibility: visible;
+  opacity: 0.5;
+}
+.return-to-top.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.return-to-top img {
+  width: 4rem;
+  height: auto;
+}
+
+.return-to-top:hover {
+  opacity: 1;
+}
+
+.return-to-top:hover img {
+  -ms-transform: translateY(-10px); /* IE 9 */
+  -webkit-transform: translateY(-10px); /* Safari prior 9.0 */
+  transform: translateY(-10px); /* Standard syntax */
+}
+
+/*************back to top end********/
+
+/*************link underline effect start********/
+
+.top-nav a,
+.top-nav a:visited,
+.top-nav a:hover,
+.top-nav a:active {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  transition: 0.5s color ease;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  color: #feffff;
+}
+.top-nav a.top-nav-item:after {
+  content: "";
+  transition: 0.5s all ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+
+  bottom: -0.25em;
+
+  height: 3px;
+  height: 0.1rem;
+  width: 0;
+  background: #feffff;
+
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.top-nav a.top-nav-item:hover:after {
+  width: 100%;
+}
+
+/*************link underline effect end********/
+
+.nextArrow {
+  display: inline-flex;
+  z-index: 99;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: -5vh;
+  margin: 2em auto;
+  opacity: 0.5;
+}
+
+.skills-down,
+.portfolios-down,
+.about-down {
+  left: 49%;
+}
+
+.skills-down {
+  bottom: -3vh;
+}
+.portfolios-down {
+  bottom: 0vh;
+}
+.about-down {
+  bottom: -2vh;
+}
+.nextArrow:hover {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
 .intro {
   width: 100%;
   height: auto;
@@ -81,7 +199,7 @@ header .mylogo img {
 }
 
 .intro h1 .position {
-  color: #def2f1;
+  color: #feffff;
 }
 
 .skills {
@@ -125,12 +243,12 @@ header .mylogo img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   width: 80%;
-  margin: 6rem auto;
+  margin: 4rem auto 0 auto;
   text-align: center;
 }
 
 .project img {
-  max-width: 20rem;
+  max-width: 16rem;
   height: auto;
 }
 
@@ -147,6 +265,14 @@ header .mylogo img {
   color: #feffff;
   size: 1.5rem;
   text-align: right;
+}
+
+.project {
+  padding: 2rem;
+}
+.project:hover {
+  background-color: rgba(254, 255, 255, 0.3);
+  border-radius: 1rem;
 }
 
 .about {
@@ -191,14 +317,20 @@ header .mylogo img {
   font-weight: bold;
 }
 
-.socialMedia {
-  position: relative;
-  top: 12rem;
-  margin-right: 4rem;
+.getInTouchBtn:hover {
+  background-color: rgba(43, 122, 119, 0.5);
+  transform: scale(1.2);
 }
-.socialMedia img {
-  max-width: 2rem;
+
+.contact-socialMedia {
+  margin: 2rem auto;
+  text-align: center;
+}
+.contact-socialMedia img {
+  max-width: 4rem;
   height: auto;
-  float: right;
-  margin: 2rem 0.5rem;
+  margin: 2rem;
+}
+.contact-socialMedia img:hover {
+  transform: scale(1.2);
 }
