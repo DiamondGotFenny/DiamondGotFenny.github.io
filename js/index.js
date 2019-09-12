@@ -36,3 +36,14 @@ function smoothJump(ele) {
     behavior: "smooth"
   });
 }
+
+const btn = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".top-nav");
+
+btn.addEventListener("click", menuOnClickHandler);
+menu.addEventListener("click", menuOnClickHandler);
+
+function menuOnClickHandler() {
+  const bodyt = document.querySelector("body");
+  bodyt.classList.toggle("open");
+}
