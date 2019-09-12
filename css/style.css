@@ -217,6 +217,7 @@ header .mylogo img {
   grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
   width: 70%;
   margin: 6rem auto;
 }
@@ -405,4 +406,83 @@ header .mylogo img {
   box-shadow: 0 0 1px 15px rgba(222, 242, 241, 0.4),
     0 0 1px 30px rgba(222, 242, 241, 0.1), 0 0 1px 45px rgba(222, 242, 241, 0.1);
   transform: scale(1.2);
+}
+
+/***********small screenn*********/
+@media only screen and (max-width: 768px) {
+  header {
+    height: calc(90vh + 3rem);
+  }
+  .intro {
+    margin: 3rem auto;
+  }
+  .intro img {
+    max-width: 8rem;
+  }
+  .intro h1 {
+    font-size: 1.5em;
+  }
+
+  .skills {
+    height: calc(90vh + 3rem);
+    padding-top: 6rem;
+  }
+  .skills-grid-container {
+    margin: 6rem auto 2rem auto;
+  }
+  .skills-down {
+    margin: 1em auto;
+    bottom: 0vh;
+    left: 48%;
+  }
+
+  .portfolios {
+    height: auto;
+  }
+  .projects-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+  }
+
+  .about {
+    height: auto;
+    padding-top: 4rem;
+  }
+
+  .contact {
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .contact h2 {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .getInTouchBtn {
+    padding: 2rem;
+    margin: 1rem auto 0 auto;
+    width: 80%;
+    left: 10%;
+    font-size: 1.5rem;
+  }
+
+  .contact-socialMedia {
+    margin: 0;
+    text-align: center;
+  }
+  .contact-socialMedia img {
+    max-width: 3rem;
+    margin: 1rem;
+  }
+
+  .return-to-top {
+    bottom: 8rem;
+    margin: 0 1.5em 1.5em 0;
+  }
 }
