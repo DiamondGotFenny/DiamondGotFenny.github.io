@@ -39,6 +39,12 @@ header .mylogo img {
 button.menu-toggle {
   display: none;
 }
+.top-header {
+  display: flex;
+}
+.top-header nav {
+  margin-left: auto;
+}
 .top-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,9 +113,7 @@ button.menu-toggle {
 /*************back to top end********/
 
 /*************link underline effect start********/
-nav {
-  display: inline;
-}
+
 .top-nav a,
 .top-nav a:visited,
 .top-nav a:hover,
@@ -150,21 +154,15 @@ nav {
 /*************link underline effect end********/
 
 .nextArrow {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
   position: relative;
   bottom: -5vh;
   margin: 2em auto;
   opacity: 0.5;
-}
-
-.skills-down,
-.portfolios-down,
-.about-down {
-  left: 49%;
 }
 
 .skills-down {
@@ -174,7 +172,8 @@ nav {
   bottom: 0vh;
 }
 .about-down {
-  bottom: -2vh;
+  bottom: 0vh;
+  margin-bottom: 0;
 }
 .nextArrow:hover {
   opacity: 1;
@@ -182,12 +181,16 @@ nav {
 }
 
 .intro {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
   text-align: center;
-  display: inline-block;
-  margin: 8rem auto;
+  margin: 8rem auto 0 auto;
+  justify-content: center;
+  align-items: center;
 }
+
 .intro img {
   max-width: 15rem;
   height: auto;
@@ -222,7 +225,7 @@ nav {
   grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
+  justify-items: center;
   width: 70%;
   margin: 6rem auto;
 }
@@ -434,11 +437,11 @@ nav {
   }
   .skills-grid-container {
     margin: 6rem auto 2rem auto;
+    width: 100%;
   }
   .skills-down {
     margin: 1em auto;
-    bottom: 0vh;
-    left: 48%;
+    bottom: -5vh;
   }
 
   .portfolios {
@@ -453,7 +456,10 @@ nav {
     margin: 4rem auto 0 auto;
     text-align: center;
   }
-
+  .portfolios-down {
+    margin: 2rem auto 0 auto;
+    bottom: 2vh;
+  }
   .about {
     height: auto;
     padding-top: 4rem;
